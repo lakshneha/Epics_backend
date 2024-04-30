@@ -9,7 +9,7 @@ const client = new Groq({ apiKey: groqApiKey });
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.send('<img src="https://indianmemetemplates.com/wp-content/uploads/Dhanda-first-class-chal-raha-hai-takatak-chal-raha-hai-aur-paiso-ki-to-baarish-ho-rahi-hai-baarish.jpg"></img>');
 });
 
 app.post('/sms', (req, res) => {
