@@ -36,7 +36,7 @@ app.post('/sms', (req, res) => {
 async function generateAnswer(question) {
     const chatCompletion = await client.chat.completions.create({
         messages: [{ role: 'user', content: question }],
-        model: 'llama3-8b-8192',
+        model: 'mixtral-8x7b-32768',
     });
 
     return chatCompletion.choices[0].message.content;
