@@ -3,7 +3,7 @@ const { MessagingResponse } = require('twilio').twiml;
 const { Groq } = require('groq-sdk');
 
 const app = express();
-const groqApiKey = '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';
+const groqApiKey = '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';
 const client = new Groq({ apiKey: groqApiKey });
 
 app.use(express.urlencoded({ extended: true }));
@@ -36,7 +36,7 @@ app.post('/sms', (req, res) => {
 async function generateAnswer(question) {
     const chatCompletion = await client.chat.completions.create({
         messages: [{ role: 'user', content: question }],
-        model: 'mixtral-8x7b-32768',
+        model: 'llama3-8b-8192',
     });
 
     return chatCompletion.choices[0].message.content;
