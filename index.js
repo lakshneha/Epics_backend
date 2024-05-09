@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.send('<img src="https://indianmemetemplates.com/wp-content/uploads/Dhanda-first-class-chal-raha-hai-takatak-chal-raha-hai-aur-paiso-ki-to-baarish-ho-rahi-hai-baarish.jpg"></img>');
 });
 
-app.post('/sms', (req, res) => {
+app.post('/', (req, res) => {
     const incomingQue = req.body.Body ? req.body.Body.toLowerCase() : '';
     console.log("Request: ", req.body);
 
