@@ -3,7 +3,7 @@ const { MessagingResponse } = require('twilio').twiml;
 const { Groq } = require('groq-sdk');
 
 const app = express();
-const groqApiKey = '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';
+const groqApiKey = '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';
 const client = new Groq({ apiKey: groqApiKey });
 
 app.use(express.urlencoded({ extended: true }));
